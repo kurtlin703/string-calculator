@@ -65,4 +65,7 @@ describe("add", function() {
       add("1,2,3//;\n1000,1;2");
     }).toThrow(Error("invalid input"));
   });
+  it("should return negatives are not allowed", ()=>{
+    expect(function(){add("-1,-2,3,4")}).toThrow()
+  })
 });

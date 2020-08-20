@@ -34,6 +34,12 @@ function add(string_number) {
       );
       stringSplit = numberOfString.split(delimiters);
     }
+    let negativeIntergers=[]
+    let negatives = /-\d+?/g
+
+    if (string_number.match(negatives)){
+      throw new Error("negatives not allowed in clalculation ")
+    }
   }
 
   let result = 0;
